@@ -1,7 +1,7 @@
 {
   "bucket_pairs": [
     {
-      "label": "BMT TEP XML Ingestion (staging)",
+      "label": "My S3 Pair",
       "enabled": true,
       "provider_retention_days": 30,
       "directories": {
