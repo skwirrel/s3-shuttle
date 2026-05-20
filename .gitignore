@@ -1,0 +1,5 @@
+config.json
+buckets.json
+*.db
+*.lock
+*.log

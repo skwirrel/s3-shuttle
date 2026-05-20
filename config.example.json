@@ -1,0 +1,10 @@
+{
+  "bucket_config_path": "./buckets.json",
+  "database_path": "./shuttle_state.db",
+  "lock_file_path": "./shuttle.lock",
+  "log_level": "INFO",
+  "log_file": "./shuttle.log",
+  "verification_interval_hours": 24,
+  "mass_delete_threshold_percent": 20,
+  "assume_role_session_name": "s3-shuttle"
+}

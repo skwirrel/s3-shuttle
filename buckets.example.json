@@ -1,0 +1,28 @@
+{
+  "bucket_pairs": [
+    {
+      "label": "BMT TEP XML Ingestion (staging)",
+      "enabled": true,
+      "provider_retention_days": 30,
+      "directories": {
+        "incoming": "incoming/",
+        "completed": "completed/",
+        "errors": "errors/"
+      },
+      "local": {
+        "bucket": "REPLACE_WITH_LOCAL_BUCKET_NAME",
+        "region": "eu-west-2",
+        "access_key_id": "REPLACE_WITH_LOCAL_ACCESS_KEY_ID",
+        "secret_access_key": "REPLACE_WITH_LOCAL_SECRET_ACCESS_KEY"
+      },
+      "remote": {
+        "assume_role_access_key_id": "REPLACE_WITH_IAM_USER_ACCESS_KEY_ID",
+        "assume_role_secret_access_key": "REPLACE_WITH_IAM_USER_SECRET_ACCESS_KEY",
+        "external_id": "REPLACE_WITH_EXTERNAL_ID",
+        "role_arn": "REPLACE_WITH_ROLE_ARN",
+        "bucket": "REPLACE_WITH_REMOTE_BUCKET_NAME",
+        "region": "eu-west-2"
+      }
+    }
+  ]
+}
