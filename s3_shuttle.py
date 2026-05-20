@@ -452,6 +452,13 @@ def process_incoming(pair, local_s3, remote_s3, config, dry_run):
             _log(logging.ERROR, f"[{label}] push failed: {key}: {e} — left in place for retry", "error")
             counts["failed"] += 1
 
+    # Ensure the folder marker still exists after deleting files
+    if counts["pushed"] > 0 and not dry_run:
+        try:
+            local_s3.put_object(Bucket=local_bucket, Key=prefix, Body=b"")
+        except Exception as e:
+            _log(logging.WARNING, f"[{label}] could not restore folder marker {prefix}: {e}", "warn")
+
     return counts
 
 
